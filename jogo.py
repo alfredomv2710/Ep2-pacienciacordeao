@@ -13,6 +13,7 @@ while continua != True and terminar == False:
 
 while continua:
     baralho = cria_baralho()
+    #baralho = ['6♥', 'J♥', '9♣', '9♥']
     while possui_movimentos_possiveis(baralho):
         print("O estado atual do baralho é:\n") 
         for i in range(len(baralho)):
