@@ -33,15 +33,12 @@ while continua:
             print("Sobre qual carta deseja empilhar o",baralho[numero_da_carta]) 
             print('1. ',baralho[numero_da_carta-1])
             print('2. ',baralho[numero_da_carta-3]) 
-            escolha = input("Escolha 1 ou 2! ")      
+            escolha = input("Escolha 1 ou 2! ")
+            if escolha == "1":
+                empilha(baralho,numero_da_carta,numero_da_carta-1)
+            elif escolha == "2":
+                empilha(baralho,numero_da_carta,numero_da_carta-3)
 
-
-
-
-
-        break
-
-    continua = False
     if len(baralho) == 1:
         print ('voce ganhou')
     else:
