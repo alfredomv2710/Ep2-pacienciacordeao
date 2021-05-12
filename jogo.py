@@ -24,8 +24,18 @@ while continua:
             numero_da_carta = int(input(f"A carta {baralho[numero_da_carta]} não pode ser movida. Escolha uma carta: (1-{len(baralho)})"))
             numero_da_carta = numero_da_carta -1
             movimentos = lista_movimentos_possiveis(baralho, numero_da_carta)
-        if movimentos == [1]:
-            
+        if len(movimentos) == 1:
+            if movimentos[0] == 1:
+                empilha(baralho,numero_da_carta,numero_da_carta-1)
+            else:
+                empilha(baralho,numero_da_carta,numero_da_carta-3)
+        else: 
+            print("Sobre qual carta deseja empilhar o",baralho[numero_da_carta]) 
+            print('1. ',baralho[numero_da_carta-1])
+            print('2. ',baralho[numero_da_carta-3]) 
+            escolha = input("Escolha 1 ou 2! ")      
+
+
 
 
 
