@@ -56,3 +56,9 @@ def possui_movimentos_possiveis(baralho):
         if lista_movimentos_possiveis(baralho, i) != []:
             return True
     return False
+
+
+def empilha(baralho, origem, destino):
+    baralho[destino] = baralho[origem]
+    baralho.pop(origem)
+    return baralho
